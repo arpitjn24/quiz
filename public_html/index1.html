@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="jquery.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-image: url("geo-yellow.png");
+        }
+        nav{
+            background-color: #42A5F5;
+            padding: 0 30px;
+            color: grey;
+        }
+        nav span{
+            float: right;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            padding: 10px;
+            margin: 20px 0;
+            background-color: #1f496a;
+        }
+        nav div{
+            display: inline-block;
+            color: darkblue;
+        }
+        h1{
+            font-size: 50px;
+        }
+        h2{
+            font-size: 30px;
+        }
+        #choiceContainer{
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
+        #choice_flex_Container{
+            display: flex;
+            justify-content: space-around;
+        }
+        .choice{
+            background-color: #1b1a1a;
+            margin: 30px 0;
+            padding: 30px 3%;
+        }
+        .choice_image{
+            border-radius: 50%;
+            width: 45vh;
+            height: 45vh;
+            margin: 0 auto 30px;
+            text-align: center;
+            background-color: #302d2d;
+            cursor: pointer;
+            box-shadow: 4px 4px #42A5F5;
+        }
+        .choice_image i{
+            text-align: center;
+            color: grey;
+            font-size: 30vh;
+            padding: 8vh;
+            display: inline-block;
+        }
+        .choice button{
+            display: block;
+            margin: auto;
+            background-color: transparent;
+            color: aqua;
+            font-size: 50px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div>
+        <h1>SCRATCH BRAINZZZZ</h1>
+        <h2>Let's Test Your IQ</h2>
+    </div>
+    <span><i class="fa fa-user fa-2x" aria-hidden="true"></i></span>
+</nav>
+<div id="choiceContainer">
+    <div id="choice_flex_Container">
+        <div class="choice" id="host">
+            <div class="choice_image"><i class="fa fa-user" aria-hidden="true"></i></div>
+            <button type="button">Host Game</button>
+        </div>
+        <div class="choice" id="player">
+            <div class="choice_image"><i class="fa fa-users" aria-hidden="true"></i></div>
+            <button type="button">Join Game</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#host').click(function () {
+        $('#player').hide();
+        $('#host button').hide();
+        $('.choice_image').hide();
+    });
+</script>
+</body>
+
+</html>

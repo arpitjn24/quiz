@@ -6,12 +6,17 @@ const questionPromise = require('./scrap').quesAns();
 const express = require('express');
 const app = express();
 
-app.get('/' , (req , res)=>{
+app.use('/', express.static(__dirname + '/public_html'));
+
+app.get('/getdata' , function(req , res){
+    console.log('data requested');
     questionPromise.then( function (data) {
+        console.log(data);
         res.send(data);
-    });
+        console.log('data sent');
+});
 })
 
-app.listen(8080 , function () {
-    console.log('Server is runing on port 8080');
+app.listen(8000 , function () {
+    console.log('Server is runing on port http://localhost:8000');
 })

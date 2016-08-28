@@ -1,25 +1,24 @@
 {
   "name": "quiz",
   "version": "1.0.0",
-  "description": "quiz",
   "main": "scrap.js",
+  "dependencies": {
+    "osmosis": "^1.0.2"
+  },
+  "devDependencies": {},
   "scripts": {
-    "start" :  " node server.js; ",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js;main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/piyushk96/quiz.git"
+    "url": "git+https://github.com/bigdaarpit/quiz.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/piyushk96/quiz/issues"
+    "url": "https://github.com/bigdaarpit/quiz/issues"
   },
-  "homepage": "https://github.com/piyushk96/quiz#readme",
-  "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "osmosis": "^1.0.2"
-  }
+  "homepage": "https://github.com/bigdaarpit/quiz#readme",
+  "description": ""
 }

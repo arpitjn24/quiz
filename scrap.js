@@ -26,15 +26,17 @@ module.exports = {
                 .data(function (obj) {
                     questions.push(obj);
                 })
+
                 .done(function () {
                     resolve(questions);
+               console.log('l')
                 })
 
             // .log(console.log)
              .error(reject)
             // .debug(console.log)
 
-            // return questions;
+                //return questions;
         });
     }
 };
